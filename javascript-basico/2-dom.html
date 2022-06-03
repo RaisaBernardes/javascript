@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+       body {
+           background: rgb(68, 125, 199);
+           color: white;
+           font: normal 18pt Arial;
+       }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        //Navegando entre elementos do DOM
+        var corpo = window.document.body //escadinha da árvore DOM
+        corpo.style.background = 'black'
+        
+        var p1 = window.document.getElementsByTagName('p')[1] //selecionando o segundo <p> do documento. O primeiro seria [0]
+        p1.style.color = 'blue'
+
+       // document.write(p1.innerText) //escreve na tela o conteúdo que está dentro da variavel "p1" (sem os filhos)
+        document.write(p1.innerHTML) //escreve o que tem na variavel p1 por completo (com os filhos, nesse caso com o strong)
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = "Mudando texto da div msg"
+
+        //var d = window.document.querySelector('div#msg') //'div#msg' pq 'msg' é um id. Se fosse uma classe seria 'div.msg'
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+O que é DOM?
+
+É acrônimo para Document Object Model (Modelo de objetos para documentos).
+Basicamente é um conjunto de objetos dentro do seu navegador que vai dar acesso aos componentes internos do seu website. Ele não funciona dentro do Node.js, mas ele está presente quando eu estou rodando o JS dentro do meu navegador.
+
+______________________________________________________
+
+
+Árvore DOM
+
+Começa da raiz (window)
+Tudo dentro do JS está dentro de um objeto chamado "window". A janela do meu navegador é um objeto DOM e se chama window. Dentro do window existem vários outros objetos, três deles são:
+
+Location - Diz qual é a localização do site, a URL, a página atual, a página anterior...
+
+Document - É o documento atual. Dentro do document existe o html, que é a parte de html do meu site. Dentro do html eu tenho 2 objetos: head e body. Dentro de head existe várias tags (meta, title, etc), e dentro do body temos o h1, p, div, etc.
+
+History - Vai guardando de onde vc veio e pra onde vc vai, o que facilita a navegação dentro do seu site.
+
+______________________________________________________
+
+SELECIONANDO ELEMENTOS
+
+por Marca -----> getElementsByTagName() //qnd tem mais de um objeto, deve-se usar o [] para informar qual é o objeto
+por ID --------> getElementById()
+por Nome ------> getElementsByName() //usar o [] qnd tem mais de um objeto
+por Classe ----> getElementsByClassName()
+por Seletor ---> querySelector() ou querySelectorAll() //O querySelector é um método mais recente
+
+______________________________________________________
+
+
+EVENTOS DOM
+
+É tudo aquilo que possa acontecer com um elemento.
+
+Ex.: Eventos de mouse
+
+- Mouseenter --->>> Quando eu "entro" com o mouse no espaço do elemento, por exemplo, uma div que é um quadrado na tela.
+- Mousemove ---->>> Quando eu movo o mouse dentro do espaço do elemento
+- Mousedown ---->>> Quando eu clico e seguro 
+- Mouseup ------>>> Quando eu solto após clicar e segurar
+- Click -------->>> Apertar e soltar rapidamente
+- Mouseout ----->>> Quando eu saio do espaço do elemento (contrário do mouseenter)
+
+
+_______________________________________________________
+
+FUNÇÕES
+
+É um conjunto de códigos que serão executadas apenas quando um evento ocorrer (Não ocorre automaticamente assim que carrega a página)
+
+function ação(parametros){
+	
+	bloco
+}
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //window.alert('Olá!') //Abre uma janela de alerta dizendo "Olá"
+        //window.confirm('Está gostando de JS?') //Abre uma janela de alerta com a opção de "ok" ou "cancel"
+        var nome = window.prompt('Digite seu nome') //guardando o resultado desse prompt na var "nome"
+        window.alert('Seja bem-vindo(a), ' + nome.toUpperCase() + '!')
+        
+
+        var n1 = Number(window.prompt('Digite um número: ')) //Tem que fazer a conversão para inteiro, pois o comando window.prompt() retorna uma string
+        var n2 = Number(window.prompt('Digite outro numero: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+        //(number + number) para adição
+        //(string + string) para concatenação
+
+        document.write(`Seu nome tem ${nome.length} letras!`) //document.write escreve algo na tela sem ser por alerta.
+
+        
+        
+
+        
+    </script>
+</body>
+</html>

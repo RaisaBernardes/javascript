@@ -1,0 +1,270 @@
+O que é ECMAScript?
+
+A ECMA (Associação Europeia dos Fabricantes de Computadores) é uma associação que realiza a especificação ou padronização de sistemas da informação. E 1996 a Netspace decidiu juntar o JavaScript à ECMA International.
+Com essa junção, foi criado um novo padrão de linguagem, que foi batizado com a união das palavras “ECMA” e “JavaScript”, resultando no nome “ECMAScript”. Desde esse ano, as duas tecnologias andam juntas. Na realidade, ECMAScript é o nome oficial da tecnologia. Entretanto, o nome JavaScript “caiu nas graças da torcida”, que no caso é a comunidade de desenvolvedores, e até hoje a linguagem é mais conhecida por esse nome.
+
+_____________________________________________________
+
+DECLARAR VARIAVEIS
+
+let nome_variavel
+var nome_variavel
+_____________________________________________________
+
+IDENTIFICADORES (nomes de variaveis, funções, etc)
+
+- Podem começar com letra, $ ou _ ($ e _ são mais raros)
+- Não podem começar com números
+- É possivel usar letras e números
+- É possivel usar acentos e símbolos
+- Não podem conter espaços
+- Não podem ser palavras reservadas
+
+_____________________________________________________
+
+DICAS
+
+- O javascript é CaseSensitive
+- escolher nomes coerentes
+- Evite se tornar um prgramador alfabeto ou programador contador
+
+_____________________________________________________
+
+DATA TYPES 
+(Tipos primitivos)
+
+
+***Number
+	- Infinity
+	- NaN (Not a number)
+***String
+
+" "
+' '
+` `
+***Boolean
+***Null
+***Object
+	- Array
+	- Null
+***Function
+
+Para descobrir o tipo da variavel basta digitar o comando typeof e o valor
+Ex.:
+typeof 6
+= number
+
+typeof "Raisa"
+= string
+
+typeof null
+= object
+
+type of []
+= object
+
+type of {}
+= object
+
+
+(Obs.: Uma variavel "var teste = 1" é do tipo number , mas pode ser transformada atribuída a outro tipo, por exemplo uma string, 
+teste = 'Raisa')
+
+_____________________________________________________
+
+---Conversão de String > Número---
+
+Number.parseInt(nomeVariavel)
+Number.parseFloat(nomeVariavel)
+
+ou apenas
+
+Number(nomeVariavel)
+
+---Conversão de Número > String---
+
+String(nomeVariavel)
+nomeVariavel.toString()
+
+_____________________________________________________
+
+---Formatando Strings---
+
+var s='JavaScript'
+
+'Eu estou aprendendo s' 	//não faz interpolação
+'Eu estou aprendendo' + s 	//usa concatenação
+`Eu estou aprendendo ${s}` 	//usa template string
+
+s.length 		//retorna quantos caracteres tem numa string
+s.toUpperCase() //formata tudo para letras maiúsculas
+s.toLowerCase() //formata tudo para letras minúsculas
+
+
+_____________________________________________________
+
+---Formatando números---
+(código abaixo feito no node)
+
+> n1 = 1000
+1000
+> n1.toFixed(2) 													//faz o número ter 1 casas decimais após a vírgula
+'1000.00'
+> n1.toFixed(2).replace('.', ',') 									//faz o número ter 1 casas decimais após a vírgula e troca o . por ,
+'1000,00'
+> n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) 	//formata para a moeda local
+'R$ 1.000,00'
+
+
+_____________________________________________________
+
+---OPERADORES---
+
+(Operadores aritméticos)
+
+5 + 2 = 7
+5 - 2 = 3
+5 * 2 = 10
+5 / 2 = 2.5
+5 % 2 = 1 (resto da divisão)
+5 ** 2 = 25 (potência 5^2)
+
+
+Precedência (o que o compilador calcula primeiro)
+()
+**
+* / %
++ - 
+
+Ex.:
+
+var a = 5 + 3 -----------> 8
+var b = a % 5 -----------> 3
+var c = 5 * b ** 2 ------> 45
+var d = 10 - a / 2 ------> 6
+var e = 6 * 2 / d -------> 2
+var f = b % e + 4 / e ---> 3
+
+
+(Operadores de atribuição)
+
+var n = 3
+
+ n = n + 4 ---> n += 4
+ n = n - 5 ---> n -= 5
+ n = n * 4 ---> n *= 4
+ n = n / 2 ---> n /= 2
+ n = n ** 2 --> n**= 2
+ n = n % 5 ---> n %= 5
+
+ ---Incremento e Decremento---
+
+ x = x + 1 ---> ++x
+ x = x - 1 ---> --x
+
+ Ex.:
+
+ > var num = 2
+
+> num
+2
+> num++ //retorna 2 pois ele incrementa depois
+2
+> num //agora qnd eu digito "num" ele mostra o incremento
+3
+> ++num
+4    // ja mostra  pq o incremento veio antes
+> num
+4
+> num--
+4
+> --num
+2
+
+
+(Operadores relacionais)
+Obs.:Para toda expressão que tenha um operador relacional ligado a ela, o resultado dessa expressão será um valor booleano (true ou false)
+
+5 > 2 ----> true
+7 < 4 ----> false
+8 >= 8 ---> true
+9 <= 7 ---> false
+5 == 5 ---> true
+4 != 4 ---> false
+
+Identidade
+
+5 == 5 ------> true
+5 == '5' ----> true //pois analiza o valor
+5 === '5' ---> false //pois analiza o valor e tipo
+5 === 5 -----> true
+
+
+(Operadores lógicos)
+
+
+! //negação
+&& //e
+|| //ou
+
+ordem de compilação --> !, &&, ||
+
+---Conjunção---
+
+true && true ----> true
+true && false ---> false
+false && true ---> false
+false && false --> false
+
+---Disjunção---
+
+true || false ---> true
+false || true ---> true
+true || true ----> true
+false || false --> false
+
+Ex.:
+
+var a = 5
+var b = 8
+
+a > b &&  b % 2 == 0 // ordem -> operadores aritmeticos , operadores relacionais , operadores lógicos
+resultado -> false
+
+a <= b || b / 2 == 2
+resultado -> true
+
+
+Ordem de precedência geral (o que o compilador calcula primeiro)
+
+() ** / ...
+> < >= ...
+!
+&&
+||
+
+ (Operadores ternários)
+
+ ?
+ : 
+
+ teste ? true : false
+ Ex.: média >= 7 ? "Aprovado" : "Reprovado"
+
+ var x = 8
+ var res = x % 2 == 0 ? 5 : 9 //res = 5
+
+ var idade = 19
+ var r = idade >= 18 ? 'MAIOR' : 'MENOR' //r = 'MAIOR'
+
+ 
+ _____________________________________________________
+
+
+
+Node.js
+
+node -> Da inicio ao node
+.exit -> Sai do node
+Ctrl L -> Limpa a tela
+
