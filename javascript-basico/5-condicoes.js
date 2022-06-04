@@ -9,3 +9,4 @@ if(vel > 60){ //condição simples (sem 'else')
 }
 console.log('Dirija sempre com o cinto de segurança!')
 
+
