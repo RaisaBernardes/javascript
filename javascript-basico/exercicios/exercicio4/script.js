@@ -9,7 +9,7 @@ function gerarTabuada(){
         for (var i=1; i<=10; ++i){
             var item = document.createElement('option') //criando dinamicamente
             item.text = `${numero} x ${i} = ${numero*i}`
-            item.value = `tab${i}` //essa linha serve para aber qual item foi selecionado. (útil apenas para outras linguagens como php)
+            item.value = `tab${i}` //essa linha serve para saber qual item foi selecionado. (útil apenas para outras linguagens como php)
             tab.appendChild(item)
         }
         
