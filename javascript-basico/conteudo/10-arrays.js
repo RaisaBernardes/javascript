@@ -1,3 +1,5 @@
+//Em JS arrays são heterogênios.
+
 var num = [9, 7, 3, 1, 5]
 
 console.log(num)
