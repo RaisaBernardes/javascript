@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Quicksand&display=swap');
 
 body{
-    background-color: #ffffff;
+    background-image: linear-gradient(to right bottom, #ffffff, #fcfcfc, #fafafa, #f7f7f7, #f5f5f5, #f5f5f5, #f5f5f6, #f4f5f6, #f5f7f9, #f5fafb, #f5fcfd, #f6fffe);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body{
 
 header{
     text-align: center;
-    color: #3a3a39;
+    color: #757575;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -30,12 +30,12 @@ section{
 }
 
 /*decorative circle*/
-section::before{
+/* section::before{
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
-    background: #fcfcfc;
+    width: 400px;
+    height: 400px;
+    background: #ffffff;
     border-radius: 50%;
     bottom: 0;
     top: 0;
@@ -43,11 +43,10 @@ section::before{
     right: 0;
     margin: auto; 
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
+} */
 
 .calculator{
-    background-color: #181818;
-    /* background: linear-gradient(#0C0C0C, #3B3B3B); */
+    background-color: #f7f7f7f3;
     position: relative;
     min-width: 200px;
     min-height: 350px;
@@ -55,12 +54,7 @@ section::before{
     padding: 8px;
     border-radius: 5px;
     z-index: 10;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
-    0 2px 4px rgba(0,0,0,0.07), 
-    0 4px 8px rgba(0,0,0,0.07), 
-    0 8px 16px rgba(0,0,0,0.07),
-    0 16px 32px rgba(0,0,0,0.07), 
-    0 32px 64px rgba(0,0,0,0.07);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .display{
@@ -68,7 +62,7 @@ section::before{
     justify-content: center;
     height: 100px;
     margin-bottom: 20px;
-    color: white;
+    color: rgb(61, 61, 61);
     font: normal 4rem serif;
     overflow: hidden;
     border-radius: 5px;
@@ -81,10 +75,10 @@ section::before{
 }
 
 .calculator button{
-    background: #222222;
+    background: #e3d9eb;
     border: none;
     font-family: 'Montserrat', sans-serif;
-    color: rgba(255, 255, 255, 0.918);
+    color: rgba(82, 82, 82, 0.918);
     padding: 18px; /*o padding interfere na largura da calc*/
     outline: none;
     cursor: pointer;
@@ -93,11 +87,12 @@ section::before{
 
 #limparDisplay, #limparCalculo, #backSpace, #operadorDiv,
 #operadorSom, #operadorSub, #operadorMult{
-    background-color: #1E1E1E;
+    background-color: #d4cddd;
 }
 
 #igual{
-    background-color: #490CF5;
+    background-color: #433172;
+    color: white;
 }
 
 
