@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades do Document</title>
+</head>
+<body>
+    <h1 id="title">Título principal</h1>
+    <h2 class="subtitle">Este é o segundo título</h2>
+    <p id="parágrafo">Este é um parágrafo</p>
+
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+
+    <div id="container">
+        <p>Parágrafo</p>
+        <button id="btn">Botão</button>
+    </div>
+
+    <div><a href="#">Google</a></div>
+    <div><a href="#">Facebook</a></div>
+
+    <script>
+        //propriedades do Document
+
+        console.log()
+
+        console.log(document.body)
+
+        console.log(document.head)
+
+        console.log(document.links[0])
+
+        document.links[0].textContent = 'Twitter'
+
+        console.log(document.URL)
+
+        console.log(document.title)
+
+        document.title = 'Mudando título da página'
+
+        console.log(title)
+    </script>
+</body>
+</html>
