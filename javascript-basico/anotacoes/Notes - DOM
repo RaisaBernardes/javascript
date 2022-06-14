@@ -96,4 +96,13 @@ Acessar o DOM caracteriza-se por identificar um elemento do HTML através de mé
 	1º - Acessa o elemento com o querySelector
 	2º - varEl.remove()
 
+
+---ADICIONANDO ELEMENTO---
+
+Podemos inserir um elemento dentro de outro, por exemplo, um parágrafo dentro de uma div. Isso é considerado "acrescentar um filho" em JS
+
+	métodos mais utilizados:
+	- appendChild() //insere um elemento filho
+	- insertBefore(x,y) //insere o elemento x antes de y
+
 	

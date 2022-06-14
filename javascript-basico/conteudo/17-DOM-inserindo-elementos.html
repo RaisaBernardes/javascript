@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserindo elementos</title>
+</head>
+<body>
+    <h1 id="title">Título principal</h1>
+    <h2 id="subtitle">Este é o segundo título</h2>
+    <p id="parágrafo">Este é um parágrafo</p>
+
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+
+    <div id="container">
+        <p>Parágrafo</p>
+    </div>
+
+    <script>
+
+        //criando elemento
+        let elemento = document.createElement('div')
+        elemento.classList = "div-class" //adicionando a div à uma classe
+        console.log(elemento)
+
+        //inserindo elemento filho
+        let container = document.querySelector('#container')
+        container.appendChild(elemento)
+        console.log(container)
+
+        //inserBefore - insere um elemento antes de outro 
+        let elemento2 = document.createElement('div')
+        elemento2.classList = 'div-class2'
+
+        let ref = document.querySelector('#container .div-class') //Acessando o elemento que eu quero que sirva de referência para inserir antes dele
+
+        container.insertBefore(elemento2, ref) //parâmetros: o que vai ser inserido; e a referência;
+
+
+    </script>
+</body>
+</html>
