@@ -75,7 +75,9 @@ Acessar o DOM caracteriza-se por identificar um elemento do HTML através de mé
 	innerHtml -> Retorna o texto, COM formatações e COM elementos html, ex <span> dentro de um <p>.
 
 
+---Criando elementos com o DOM---
 
+	O texto de um elemento é considerado um nó na árvore do DOM, ou seja, temos que criar o texto do elemento também.
 
 
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elementos</title>
+</head>
+<body>
+    <h1 id="title">Título principal</h1>
+
+    <h2 id="subtitle">Este é o segundo título</h2>
+
+    <p id="parágrafo">Este é um parágrafo</p>
+
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+
+    <div id="container">
+
+    </div>
+    
+    <script>
+        
+        //Criando um novo parágrafo
+        let novoParagrafo = document.createElement('p') //cria a tag <p>
+        let texto = document.createTextNode('Este é o texto do novo paráfrago') //cria um nó de texto 
+        novoParagrafo.appendChild(texto) //pega o texto e insere em <p>
+        console.log(novoParagrafo)
+
+        //inserindo o novo parágrado no HTML
+        let body = document.querySelector('body') //Acessa o <body> do html
+        body.appendChild(novoParagrafo) //insere o <p> completo no body
+
+
+        //----------------------
+
+
+        //Criando um span e colocando em uma div existente 
+        let container = document.querySelector('#container')
+        let span = document.createElement('span')
+        span.appendChild(document.createTextNode('Esse é o texto do span'))
+        console.log(span)
+        container.appendChild(span)
+        console.log(container)
+
+    </script>
+</body>
+</html>
