@@ -75,9 +75,25 @@ Acessar o DOM caracteriza-se por identificar um elemento do HTML através de mé
 	innerHtml -> Retorna o texto, COM formatações e COM elementos html, ex <span> dentro de um <p>.
 
 
----Criando elementos com o DOM---
+---CRIANDO ELEMENTOS---
 
 	O texto de um elemento é considerado um nó na árvore do DOM, ou seja, temos que criar o texto do elemento também.
 
+	Fluxo:
+	1º - Criar o elemento -> let elemento = document.createElement('p') //aqui estou criando um elemento do tipo <p>
+	2º - Criar o conteúdo do elemento -> let conteudo = document.createTextNode('Este é o texto de <p>')
+	3º - Inserir o texto dentro do elemento criado -> elemento.appendChild(conteudo)
 
 
+---REMOVENDO ELEMENTOS---
+
+	(Remover o filho)
+	1º - Acessa o pai com o querySelector
+	2º - Acessa o filho com o querySelector
+	3º - -->> varElPai.removeChild(varElFilho)
+
+	(Remover o elemento em si)
+	1º - Acessa o elemento com o querySelector
+	2º - varEl.remove()
+
+	

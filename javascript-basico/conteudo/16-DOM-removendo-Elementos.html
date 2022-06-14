@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removendo elementos</title>
+</head>
+<body>
+    <h1 id="title">Título principal</h1>
+
+    <h2 id="subtitle">Este é o segundo título</h2>
+
+    <p id="parágrafo">Este é um parágrafo</p>
+
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+
+    <div id="container">
+        <p>Parágrafo</p>
+    </div>
+
+    <script>
+
+        //-----Removendo elemento filho
+        let container = document.querySelector('#container') //Acesso o pai
+        let p = document.querySelector('#container p') //Acesso o filho
+        container.removeChild(p) //removendo o filho
+
+
+        //-----Removendo o elemento
+        let subtitle = document.querySelector('#subtitle')
+        subtitle.remove()
+
+    </script>
+
+</body>
+</html>
