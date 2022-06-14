@@ -46,14 +46,36 @@ Ex.: Eventos de mouse
 
 _______________________________________________________
 
-FUNÇÕES
+------Lidando com o DOM no javascript-----
 
-É um conjunto de códigos que serão executadas apenas quando um evento ocorrer (Não ocorre automaticamente assim que carrega a página)
 
-function ação(parametros){
+---ACESSANDO O DOM---
+
+Acessar o DOM caracteriza-se por identificar um elemento do HTML através de métodos. Podemos acessar por tags, ids, classes.
+
+	document.getElementById()
+
+	document.getElementsByClassName()
+
+	document.getElementByTagName()
+
+	document.querySelector() //Acessa o primeiro elemento (na ordem do documento), elemento coincidente ou null caso não haja elementos correspondentes.
+
+	document.querySelectorAll() //Retorna uma lista de elementos (objeto NodeList) presentes no documento. Se nenhum elemento coincide, a função retorna um objeto NodeList vazio. Se a string do seletor é inválida, querySelectorAll() lançará um exceção.
+
 	
-	bloco
-}
+
+
+---ALTERANDO CONTEÚDO---
+
+	textContent -> Retorna o text COM formatações, mas sem os elementos html. (É mais utilizado, recomendado e performático)
+
+	innerText -> Retorna somente o texto, sem formatações ou elementos html.
+
+	innerHtml -> Retorna o texto, COM formatações e COM elementos html, ex <span> dentro de um <p>.
+
+
+
 
 
 

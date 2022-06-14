@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando elementos</title>
+    <style>
+        .quadro {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" class="title">Título principal</h1>
+    
+    <h2 id="title2" class="title">Título H2</h2>
+    
+    <h1 id="title3" class="title">Título principal 2</h1>
+
+    <h2 id="subtitle" class="title">Este é o segundo título</h2>
+
+    <div>
+        <h3>Teste</h3>
+        <p id="paragrafo" class="title">Este é o primeiro parágrafo</p>
+        <p id="paragrafo2">Este é o segundo parágrafo</p>
+        <p id="paragrafo3">Este é o terceiro parágrafo</p>
+    </div>
+    <div class="quadro">
+        <p id="paragrafo4">Este é o quarto parágrafo dentro de outra div</p>
+    </div>
+
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+    
+    <script>
+
+        //-------Acessando por tag
+        var title = document.getElementsByTagName('h1')[0] //Acessa o PRIMEIRO h1
+        console.log(title)
+
+        var lis = document.getElementsByTagName('li')
+        console.log(lis[2]) //Outra forma de acessar um elemento por tag 
+
+        //-------Acessando por id
+        var subtitle = document.getElementById('subtitle')
+        console.log(subtitle)
+
+        //-------Acessando por class
+        var itensDaLista = document.getElementsByClassName('item')
+        console.log(itensDaLista)
+
+        //-------Acessando tudo por querySelectorAll
+        var paragrafos = document.querySelectorAll('p')
+        paragrafos[2].innerHTML= 'mudando o texto do terceiro parágrafo'
+
+        var elementos = document.querySelectorAll('.title') //Acessa todos os elementos com a classe .title independente do tipo (h1, p, etc)
+        for(let i=0; i<elementos.length; i++){              
+            document.write(elementos[i].innerHTML+"<br>")
+        }
+
+        //Se eu quisesse retornar os elementos da classe title de tipo <p>:
+        // var elementos = document.querySelectorAll('p.title') //Acessa todos os elementos com a classe .title independente do tipo (h1, p, etc)
+        // for(let i=0; i<elementos.length; i++){              
+        //     document.write(elementos[i].innerHTML+"<br>")
+        // }
+
+
+        //Selecionando todos os elementos <p> dentro da div
+        var elementosP = document.querySelectorAll("div > p") //Acessa todos os <p> dentro de <div>s independente da div
+        for(let i=0; i<elementosP.length; i++){              
+            elementosP[i].style.color = "#0a0"
+        }
+
+        //Selecionando todos os elementos <p> dentro de uma div específica (div de classe quadro)
+        var elementosQuadro = document.querySelectorAll("div.quadro > p") 
+        for(let i=0; i<elementosQuadro.length; i++){              
+            elementosQuadro[i].style.color = "#ffffff"
+        }
+
+        //Selecionando varios elementos diferentes
+        var elementosQuadro = document.querySelectorAll("h2, h3") 
+        for(let i=0; i<elementosQuadro.length; i++){              
+            elementosQuadro[i].style.color = "#FFFF00"
+        }
+
+    </script>
+</body>
+</html>

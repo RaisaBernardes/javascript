@@ -1,0 +1,26 @@
+Variáveis: const x var x let
+
+_____ var _____
+
+Quando declara-se uma variável com "var" a existência dela não se limita ao escopo do bloco. Ela pode ser usada e acessada na função inteira. (escopo global ou de função)
+Ex.:
+
+function start(){
+	for(var i =0; i<5; ++i){
+		console.log(i)
+	}
+	console.log(i) //O console vai ler esse "i" como se ele estivesse dentro do for.
+}
+start()
+
+Quando declaramos uma variável "var" fora de uma function, ela vira uma variável global que é anexada ao objeto Window no browser. E por que isso é ruim? Devido o objeto Window ser algo central, existe apenas uma instância desse objeto. Se usassemos uma biblioteca que tivesse o mesmo nome dessa variável "var" (Ex.: var color = 'red'), esta variável (da biblioteca) iria "cobrir" (overwrite) a minha variável color, gerando problemas ao programa. Sendo assim, deve-se EVITAR o uso do "var".
+
+_____ let _____
+
+Quando declara-se uma variável usando "let" ou "const", diferente do caso acima, elas serão utilizadas apenas dentro do bloco. (escopo de bloco)
+
+
+_____ const _____
+
+Utilize "const" quando você precisar declarar constantes, ou seja, você não quer haja uma nova atribuição de valor para uma variável durante a execução do bloco. O escopo das variáveis declaradas com const será o bloco em que elas foram declaradas.
+Diferente de var e let, sempre que definirmos uma variável com const obrigatoriamente devemos inicializá-la (o que realmente faz sentido já que não queremos que este valor seja alterado posteriormente). -> semelhante à Java.

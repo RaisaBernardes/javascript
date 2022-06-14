@@ -1,0 +1,10 @@
+*************Strict mode*************
+
+O que é? 
+- É um modo que pode ser ativado no javascript que permite que erros que antes falhavam silenciosamente agora resultem em erros de execução;
+
+Como ativar?
+- Digitar 'strict mode' na parte de cima da página, ou dentro de uma função, conforme a necessidade.
+
+Quando usar?
+- Sempre que for possível. (Nem sempre você vai conseguir deixar o seu código inteiro no modo strict sem que ele quebre). Você pode começar inserindo o modo strict dentro de funções, depois dentro do arquivo, e evoluindo devagar.

@@ -59,11 +59,10 @@ section{
 
 .display{
     display: flex;
-    justify-content: center;
+    justify-content:right;
     height: 100px;
     margin-bottom: 20px;
     color: rgb(61, 61, 61);
-    font: normal 4rem serif;
     overflow: hidden;
     border-radius: 5px;
 }
