@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: #f00;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+</style>
+</head>
+<body>
+    
+    <div id="div1"></div>
+
+    <script>
+        //Eu preciso adicionar um evento que intercepte o pressionamento de uma tecla. Este é evento é o keydown!
+        //A intenção é mover um elemento com as setas do teclado.
+
+        let px=0; //variaveis para controlar o deslocamento horizontal e vertical
+        let py=0;
+
+        function move(){
+            let obj = document.querySelector('#div1')
+            let tecla = event.keyCode
+            
+            //37= código da tecla para esquerda, 38= tecla para cima, 39= tecla para direita, 40= tecla para baixo
+            if(tecla==37){
+                px-=10  //10 é o tam do deslocamento em px
+                obj.style.left=px+"px"
+            } else if(tecla==38){
+                py-=10
+                obj.style.top=py+"px"
+            } else if(tecla==39){
+                px+=10
+                obj.style.left=px+"px"
+            } else if(tecla==40){
+                py+=10
+                obj.style.top=py+"px"
+            } else if(tecla==13){ //tecla 13=enter
+                alert('Evento removido.')
+                document.removeEventListener("keydown", move) //removendo evento
+            }
+         }
+        
+         
+         //Só vai liberar os movimentos depois de um clique no elemento
+        function addEventos(){
+            let obj = document.querySelector('#div1')
+            obj.addEventListener("click", function(){
+                obj.style.backgroundColor = "#fff"
+                document.addEventListener("keydown", move)
+            })
+        }
+
+        window.addEventListener("load", addEventos)
+
+
+         //--------- A outra opção para os movimentos é criando uma função anônima---------
+
+        // document.addEventListener("keydown", function(event){ //o event é para obter o código da tecla pressionada
+        //     let obj = document.querySelector('#div1')
+        //     let tecla = event.keyCode
+            
+        //     if(tecla==37){
+        //         px-=10 
+        //         obj.style.left=px+"px"
+        //     } else if(tecla==38){
+        //         py-=10
+        //         obj.style.top=py+"px"
+        //     } else if(tecla==39){
+        //         px+=10
+        //         obj.style.left=px+"px"
+        //     } else if(tecla==40){
+        //         py+=10
+        //         obj.style.top=py+"px"
+        //     }
+        // })
+        
+
+
+        
+
+
+        
+
+    </script>
+</body>
+</html>

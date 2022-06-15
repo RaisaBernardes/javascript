@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+    <style>
+            #div1{
+                width: 100px;
+                height: 100px;
+                border: 1px solid #000;
+                background-color: #f00;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    
+    <script>
+
+        function msg(){
+            alert('Clicou!.')
+        }
+
+        function cor1(){
+            let obj = document.querySelector('#div1')
+            obj.style.backgroundColor = "#fff"
+        }
+
+        function cor2(){
+            let obj = document.querySelector('#div1')
+            obj.style.backgroundColor = "#f00"
+        }
+
+        //Função com parâmetros (nesse caso, o addEventListener fará uso de uma função anônima)
+        function cor3(obj, cor){
+            obj.style.backgroundColor = cor
+        }
+
+        function addEventos(){
+            let obj = document.querySelector('#div1')
+            obj.addEventListener("click", msg); //parâmetros:(evento; função a ser executada)
+            obj.addEventListener("mouseover", cor1) 
+            obj.addEventListener("mouseout", function(event){
+                cor3(obj, "#ff0")
+            })
+        }
+
+        window.addEventListener("load", addEventos)
+
+       
+
+    </script>
+</body>
+</html>
