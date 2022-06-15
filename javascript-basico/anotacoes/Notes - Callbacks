@@ -1,0 +1,6 @@
+Callbacks functions
+
+- É quando passamos uma função dentro do argumento de outra função
+
+- A função callback permite executar uma função depois de uma determinada ação. É um conceito fundamental para entender a parte assíncrona do JS.
+

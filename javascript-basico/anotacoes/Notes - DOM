@@ -36,7 +36,7 @@ EVENTOS DOM
 
 Ex.: Eventos de mouse
 
-- Mouseenter --->>> Quando eu "entro" com o mouse no espaço do elemento, por exemplo, uma div que é um quadrado na tela.
+- Mouseenter --->>> Quando eu "entro" com o mouse no espaço do elemento, por exemplo, uma div que é um 	quadrado na tela.
 - Mousemove ---->>> Quando eu movo o mouse dentro do espaço do elemento
 - Mousedown ---->>> Quando eu clico e seguro 
 - Mouseup ------>>> Quando eu solto após clicar e segurar
