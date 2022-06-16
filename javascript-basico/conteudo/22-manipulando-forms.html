@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Forms</title>
+    <style>
+        label{
+            display: block;
+        }
+        input{
+            display: block;
+        }
+        input[type=submit], label{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form name="curso1" id="curso1" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste" value="Primeiro - 1">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btnEnviar" value="Enviar">
+    </form>
+    <form name="curso2" id="curso2" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste2" value="Segundo - 2">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btnEnviar" value="Enviar">
+    </form>
+    <hr>
+
+    <script>
+
+        //o forms retorna uma coleção do tipo html collection, nos permitindo trabalhar com array
+        //forms retorna O FORMULARIO, não os elementos do formulário.
+        //Primeiro precisamos acessar o formulário para depois acessar os elementos dele.
+        
+        let formulario = document.forms.length //retorna a quantidade de formulários que eu tenho na minha página
+        document.write(formulario +'<br>')
+
+        //-------Maneiras de retornar o id de um formulário específico
+        let formEspecifico = document.forms[0].id
+        document.write(formEspecifico +'<br>')
+
+        let formEspecifico2 = document.forms.item(0).id
+        document.write(formEspecifico2 +'<br>')
+
+        let formEspecifico3 = document.forms.namedItem("curso1").id
+        document.write(formEspecifico3)
+
+        //--------Maneiras de retornar o formulário inteiro
+        let formInteiro = document.forms[0].innerHTML //a função de retorno ".innerHTML" vale para todas as formas acima
+        document.write(formInteiro)
+
+
+        //--------Maneiras de retornar um elemento de um formulário
+        let formul = document.forms[0]
+        let elemento = formul.elements//retorna um objeto (array com todos os elementos)
+
+        elemento[0].style.backgroundColor = "#ddd"
+        elemento[0].value="Alterando value"
+
+        //--------Manipulando elementos com o getElementById
+        document.write(document.getElementById('curso2').elements[0].value) //A ordem de apontamento é: qual formulario -> qual elemento -> qual propriedade do elemento
+
+    </script>
+</body>
+</html>
