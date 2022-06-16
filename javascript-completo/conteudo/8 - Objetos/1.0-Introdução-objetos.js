@@ -1,13 +1,23 @@
-let amigo = { nome:'José',
-sexo: 'M',
-peso: 85.5,
+let pessoa = { 
+    nome:'José',
+    sexo: 'M',
+    peso: 85.5,
+    falar: function(){
+        console.log('Olá!')
+    },
 
-engordar(p=0){
-    console.log('Engordou')
-    this.peso +=p
-}}
+    soma: function(a, b){
+        return a + b
+    }
+}
+console.log(pessoa.nome)
 
-console.log(amigo)
+pessoa.falar()
+
+let soma = pessoa.soma(2,3)
+
+console.log(soma)
+
 
 
 // - O this segue o mesmo raciocínio do java
