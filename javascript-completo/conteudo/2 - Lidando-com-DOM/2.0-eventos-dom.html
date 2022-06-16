@@ -18,6 +18,10 @@
     </style>
 </head>
 <body>
+    <!-- Sempre que executamos uma ação em um programa, é disparado um evento. (onmouseover(), onclick(), etc)
+    Qualquer interação que eu fizer com a página ou com algum elemento eu posso disparar um evento.
+    Podemos associar uma função a um evento -->
+
     <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
         <!--onclick é um evento DOM, que quando ocorrido, executará a função clicar()-->
         Intereja
@@ -25,7 +29,7 @@
 
     <script>
         //Uma maneira de interajir com eventos DOM apenas pelo Javascript é
-        //tirar os eventos da div 'area' na linha 21 e fazer o seguinte código
+        //tirar os eventos da div 'area' na linha 21 e usar o addEventListener
         
         /*var a = window.document.getElementById('area')
         a.addEventListener('click', clicar) //o addEventListener é um método que presta atenção nos eventos especificados nos parametros
