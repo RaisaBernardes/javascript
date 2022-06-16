@@ -1,4 +1,4 @@
-//É igual ao JAVA
+//É similar ao JAVA
 
 var x = 1
 

@@ -1,4 +1,4 @@
-//console.log('O console funcionou corretamente!') //no node.js, para escrever na tela, não funciona o document.write
+//console.log('O console funcionou corretamente!') //no node.js, para escrever na tela, não funciona o document.write pois essa função é do DOM
 
 var vel = 78
 
