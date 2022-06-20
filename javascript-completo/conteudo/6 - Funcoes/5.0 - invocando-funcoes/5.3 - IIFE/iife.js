@@ -1,4 +1,5 @@
-/*
+/*--------Immediately-invoked function expression(IIEF)-------
+
 No contexto de desenvolvimento é necessário garantir que cada arquivo tenha o seu próprio escopo e assim possa existir 
 nomes iguais de variaveis em arquivos diferentes no mesmo projeto.
 Para isso, devemos: "Encapsular" a variavel/const/funcao numa função init(), pois assim, a variavel existirá apenas 

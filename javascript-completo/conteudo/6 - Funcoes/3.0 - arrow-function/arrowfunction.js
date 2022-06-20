@@ -1,4 +1,11 @@
 /*
+
+O QUE É?
+
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+* É uma alternativa compacta a uma expressão de função tradicional, mas é limitada e não pode ser usada em todas as situações.
+
+
 CARACTERÍSTICAS:
 
 * Deve-se atribuir a arrowfunction à uma variavel ou à uma constante

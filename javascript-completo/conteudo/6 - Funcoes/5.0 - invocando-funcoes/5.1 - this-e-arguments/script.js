@@ -1,5 +1,35 @@
 //---------Usando this--------
 
+
+
+function sum(x, Y){
+    console.log(arguments); //O parâmetro arguments é um objeto com todos os argumentos que a função recebeu no momento em que foi invocada.
+    console.log(this) //O this é o contexto em que a função foi chamada.
+    
+    return X + y;    
+}
+console.log(sum(1, 4));
+
+// vai imprimir
+//{"0":1,"1":4}
+//window
+//5
+
+/*
+ARGUMENTS: Podemos utilizar o "arguments" quando não sabemos quantos argumentos vamos receber quando a função for invocada. 
+É o mesmo propósito do rest parameter.
+
+THIS: quando a função for invocada, o parâmetro "this" vai receber como argumento o objeto Window.
+Se você estiver usando nodejs o this vai ser o contexto global do ambiente, que contém os objetos global, process entre outros.
+*/
+
+
+
+
+
+
+//--------This na function expression-------
+
 //O this dentro da function expression é dinâmico e refere-se ao objeto window
 //Pra resolver isso a gente: 
 //    1- Cria uma função "that" dentro da função e atribui o this a ela.
