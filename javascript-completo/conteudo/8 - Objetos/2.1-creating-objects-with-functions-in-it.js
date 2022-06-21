@@ -7,6 +7,7 @@
 
 //console.log(blogs);
 
+//If a object has one or more methods, we say it has behavior.
 let user = {
     name: 'Crystal',
     age: 30,
