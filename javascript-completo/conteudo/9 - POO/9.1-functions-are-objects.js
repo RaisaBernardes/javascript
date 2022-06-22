@@ -15,5 +15,4 @@ const Circle1 = new Function('radius', `
     }
 `);
 
-const circle = new Circle1(1); //Te same as: Circle.call({}, 1)
-
+const circle = new Circle1(1); //Te same as: Circle.call({}, 1) 
