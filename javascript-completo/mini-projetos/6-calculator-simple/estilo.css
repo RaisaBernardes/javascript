@@ -78,7 +78,7 @@ section{
 }
 
 .calculator button{
-    background: #e3d9eb;
+    background: #EBDEF0;
     border: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400px;
@@ -96,12 +96,12 @@ section{
 
 #limparCalculo, #backSpace, #operadorDiv,
 #operadorSom, #operadorSub, #operadorMult, #decimal{
-    background-color: #c6bdd3;
+    background-color: #ded2e2;
 }
 
 
 #igual{
-    background-color: #544874;
+    background-color: #581845;
     color: white;
     grid-column-start: 4;
     grid-column-end: 4;
