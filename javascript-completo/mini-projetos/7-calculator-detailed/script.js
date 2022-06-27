@@ -8,15 +8,15 @@ let novoNumero = true;
 let operador;
 let numeroAnterior;
 
-const operacaoPendente = () => {
-    
-}
+const operacaoPendente = () => operador != undefined;
 
+//7
 const calcular = () =>{
     if(operacaoPendente()){
-        const numeroAtual = display.textContent
+        const numeroAtual = parseFloat(display.textContent);
+        novoNumero = true;
         if(operador == '+'){
-            atualizarDisplay(numeroAnterior + numeroAtual)
+            atualizarDisplay(numeroAnterior + numeroAtual);
         }
     }
 }
@@ -24,32 +24,37 @@ const calcular = () =>{
 //4
 const atualizarDisplay = (texto) => {
     if(novoNumero){
-        display.textContent = texto //substitui
+        display.textContent = texto; //substitui
         novoNumero = false;
     }else{
         display.textContent += texto; //concatena
     }
-    
 }
 
 
 //3
-const inserirNumero = (evento) => { 
+const inserirNumero = (evento) => { //vou receber um evento do addEventListener
     atualizarDisplay(evento.target.textContent) //nessa linha eu estou "capturando" o conteúdo dos botões
     //A propriedade target obtém o elemento no qual o evento ocorreu originalmente
 }
+
 
 //2 - capturar o click de cada uma das telas
 //Tradução: para cada número adicione um "escutador" de click. Quando for clicado, execute "inserirNumero"
 numeros.forEach(numero => numero.addEventListener('click', inserirNumero)) //pega um número e adiciona um click. Quando clicar ele vai chamar o método "inserirNumero()" 
 
+
+//6
 const selecionarOperador = (evento) => {
     if(!novoNumero){
-    novoNumero = true;
-    operador = evento.target.textContent;
-    numeroAnterior = display.textContent;
+        calcular();
+        novoNumero = true;
+        operador = evento.target.textContent;
+        numeroAnterior = parseFloat(display.textContent);
     }
 }
+
+//5
 operadores.forEach(operador => operador.addEventListener('click', selecionarOperador))
 
 
