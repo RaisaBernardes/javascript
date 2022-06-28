@@ -1,7 +1,9 @@
+'use strict';
+
 function displayTime() {
     let date = new Date();
-    let hourBR = date.getHours().toLocaleString('pt-BR');;
-    let hour = date.getHours().toLocaleString('en-US');
+    let hourBR = date.getHours();
+    let hour = date.getHours();
     let min = date.getMinutes();
     let sec = date.getSeconds();
     let session = document.querySelector('span#session')
@@ -11,10 +13,14 @@ function displayTime() {
     }else{
         session.textContent = 'AM'
     }
+
+    let hourFormat = ("00" + hour).slice(-2);
+    let minFormat = ("00" + min).slice(-2);
+    let secFormat = ("00" + sec).slice(-2);
     
-    document.querySelector('span#hours').innerHTML = hour;
-    document.querySelector('span#minutes').innerHTML = min;
-    document.querySelector('span#seconds').textContent = sec;
+    document.querySelector('span#hours').innerHTML = hourFormat;
+    document.querySelector('span#minutes').innerHTML = minFormat;
+    document.querySelector('span#seconds').textContent = secFormat;
 }
 
 setInterval(displayTime, 10);
