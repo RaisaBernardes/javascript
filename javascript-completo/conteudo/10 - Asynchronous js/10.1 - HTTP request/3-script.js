@@ -3,7 +3,10 @@ To practice, we'll use the JSONPlaceholder API endpoints to get back json data.
 
 Steps:
 1 - Make a request object
+2 - Set up the request
+3 - Send it
 
+To track the request progress we use the "readystate"
 */
 
 const request = new XMLHttpRequest(); //this creates a request object.
