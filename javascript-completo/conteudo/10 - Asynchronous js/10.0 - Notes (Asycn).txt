@@ -1,0 +1,5 @@
+-----WHAT IS ASYNCHRONOUS CODE?-----
+
+In a nutshell, asynchronous code is a code that can start now and then finish later.
+It governs how we perform tasks that take some time to do, like requesting data from a database or from a API.
+

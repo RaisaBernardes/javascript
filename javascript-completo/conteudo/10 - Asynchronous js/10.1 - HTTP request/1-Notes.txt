@@ -1,0 +1,19 @@
+-----HTTP Request-----
+
+What is?
+
+Sometimes we want to show stuff on our website which is stored in some kind of database or in another server somewhere such as blog posts, 
+or comments, or maybe a list of songs or even user data for a profile page. Now all of that data could be stored on another server somewhere 
+or in your own database so we'd make what's known as an "http request" to reach out to that external server on that database to get that data 
+and then do something with it.
+
+In a nutshell, HTTP requests:
+
+- Make HTTP requests to get data from another server
+- We make these requests to API endpoints (These are URLs that a particular API server exposes to us so that we can use it to get data from them.)
+
+
+(See the image "2 - APIs Endpoints")
+
+Once we make a request to an endpoint from the browser we typically get back a selection of data in a format called json. Json is a format 
+which looks very much like javascript objects and then we can do something with that data.
