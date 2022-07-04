@@ -1,0 +1,49 @@
+
+----O que é----
+
+- JSON = JavaScript Object Notation
+- Como o nome fala, é uma forma de escrever objetos JS que pode ser interpretada por outras linguagens e é transportada via texto.
+- JSON é basicamente um formato leve de troca de informações/dados entre sistemas (Ex.: entre um servidor de Web e uma aplicação Web).
+- Sua notação é semelhante a de objetos no javascript, mas a principal diferença entre um objeto JavaScript padrão e um JSON é o fato do JSON ser na realidade: um texto (Uma string gigante).
+- É alternativo ao XML e YAML, no entanto é mais leve e simples.
+- É fácil para humanos lerem e editaremm e simples para os computadores processarem e gerarem dados JSON.
+- Apesar do nome, pode ser usado em qualquer linguagem de programação.  
+
+
+----Documentos JSON----
+
+- Um documento JSON é um conjunto não ordenado de dados armazenados em um par "nome": valor (campo), que inicia e termina com chaves { }.
+- Todos os nomes chave são englobados em aspas duplas " ", e são separados de seus valores por dois pontos :
+- Os pares (campos), são separados um do outro por vírgulas.
+
+
+----Aplicações do JSON----
+
+- Usado para troca de dados (criação e consumo) usando APIs. Isso ocorre, por exemplo, entre navegador (cliente) e servidor, ou entre servidores.
+- Arquivos de configuração de programas e sistemas (.json)
+- Persistência de dados em navegadores e servidores
+- É o formato de dados padrão na web atualmente
+
+
+
+----Conceitos importantes----
+
+(Serialização)
+
+- É capturar um objeto ou estrutura de dados e transformar em um documento JSON para poder fazer o envio e tratamento em outro local.
+- Métodos especiais podem realizar a serialização de uma estrutura que contenha dados, como o método json.stringfy.
+
+
+(Desserialização - Também chamado de parsing)
+
+- É o processo inverso o da serialização. Converte o JSON em valores e objetos que podem ser usados em um programa.
+- Métodos especiais realizam a desserialização de dados JSON, como o método JSON.parse
+
+
+
+----Como manipular objetos json----
+
+- Converter uma String (texto) para um objeto: (JSON.parse())
+- Converter um objeto JSON para String; (JSON.stringify())
+- Ler os dados dos atributos de um JSON; (igual a objetos no JS -> nomeObjeto.propriedade)
+- Inserir e alterar os dados dos atributos de um JSON; (igual a objetos no JS)
