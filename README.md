@@ -1,0 +1,47 @@
+Este repositório é referente a diversos cursos de JavaScript.
+
+Assuntos:
+ - DOM
+  - Teoria
+  - Eventos
+  - Manipulação de elementos
+ - Condicionais
+ - Estruturas de repetição
+ - Vetores e seus métodos
+    - push() | unshift() | pop() | shift() | splice() | indexOf() | sort() | reverse() | join() | concat()
+ - Funções
+   - Função simples
+   - Expression vs declaration
+   - Funções anônimas
+   - Arrow functions
+   - Invocando funções
+     - this e arguments
+     - invocando com outra função
+     - invocando com métodos
+     - invocando com construtor
+     - invocando com call e apply
+     - IIFE
+     - Callbacks
+  - Métodos JS
+  - POO
+    - Pilares (teoria) 
+    - Objetos 
+    - Factory and constructor functions
+    - Functions are objects
+    - Adicionando e excluindo propriedades
+    - Enumerando propriedades
+    - Abstração
+    - Getters e setters
+    - Classes
+    - Herança
+    - Prototype
+  - JS Assíncrono
+    - HTTP Request
+    - Status code
+    - Callback functions
+    - JSON
+    - Callback hell
+    - Promises
+    - Fetch API
+    - Async e Await
+    - Throwing errors
