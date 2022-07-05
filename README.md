@@ -2,9 +2,9 @@ Este repositório é referente a diversos cursos de JavaScript.
 
 Assuntos:
  - DOM
-  - Teoria
-  - Eventos
-  - Manipulação de elementos
+   - Teoria
+   - Eventos
+   - Manipulação de elementos
  - Condicionais
  - Estruturas de repetição
  - Vetores e seus métodos
