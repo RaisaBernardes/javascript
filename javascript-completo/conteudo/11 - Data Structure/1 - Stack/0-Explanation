@@ -1,0 +1,63 @@
+Stack is a simple linear data structure used for storing data. Stack follows the LIFO(Last In First Out) strategy that states that the element that is inserted last will come out first. 
+
+- It can be implemented through an ARRAY or LINKED LISTS.
+- If we try to pop from an empty stack then it is known as UNDERFLOW and if we try to push an element in a stack that is already full, then it is known as OVERFLOW. A stackoverflow can often be caused when calling a recursive function without properly defining the base or terminating case.
+
+
+
+Functions of the stack: 
+    push()          -> placing data on to a stack
+    pop()           -> removing the top element of the stack
+    peek() / top()  -> displaying the top element from the stack without removing it
+    length()        -> determining how many elements are on the stack
+    isEmpty()       -> Returns True if Stack is empty, False otherwise.
+    clear()         -> Removes all the items from the Stack.
+
+
+
+Types of Stacks:
+
+- Register Stack: This type of stack is also a memory element present in the memory unit and can handle a small amount of data only. The height of the register stack is always limited as the size of the register stack is very small compared to the memory.
+
+- Memory Stack: This type of stack can handle a large amount of memory data. The height of the memory stack is flexible as it occupies a large amount of memory data. 
+
+
+
+When is useful:
+
+- Stack data structures are useful when the order of actions is important. They ensure that a system does not move onto a new action before completing those before.
+
+
+
+Application of Stack Data Structure:
+
+- Stack is used for evaluating expression with operands and operations.
+- Matching tags in HTML and XML
+- Undo function in any text editor.
+- Infix to Postfix conversion.
+- Stacks are used for backtracking and parenthesis matching.
+- Stacks are used for conversion of one arithmetic notation to another arithmetic notation.
+- Stacks are useful for function calls, storing the activation records and deleting them after returning from the     function. It is very useful in processing the function calls.
+- Stacks help in reversing any set of data or strings.
+
+
+
+Advantages of Stack:
+
+- Stack helps in managing data that follows the LIFO technique.
+- Stacks are be used for systematic Memory Management.
+- It is used in many virtual machines like JVM.
+- When a function is called, the local variables and other function parameters are stored in the stack and automatically destroyed once returned from the function. Hence, efficient function management.
+- Stacks are more secure and reliable as they do not get corrupted easily.
+- Stack allows control over memory allocation and deallocation.
+- Stack cleans up the objects automatically.
+
+
+
+Disadvantages of Stack: 
+
+- Stack memory is of limited size.
+- The total of size of the stack must be defined before.
+- If too many objects are created then it can lead to stack overflow.
+- Random accessing is not possible in stack.
+- If the stack falls outside the memory it can lead to abnormal termination.

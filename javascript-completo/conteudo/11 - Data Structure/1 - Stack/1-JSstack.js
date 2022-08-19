@@ -1,10 +1,3 @@
-/*
-Functions: 
-    push -> placing data on to a stack
-    pop -> removing the top element of the stack
-    peek -> displaying the top element from the stack
-    length -> determining how many elements are on the stack
-*/
 
 let letters = []; //this is the stack
 
