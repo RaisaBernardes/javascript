@@ -1,0 +1,4 @@
+The set structure is like an array but without duplicate itens, plus, the values are not in a particular order.
+
+When to use:
+- To check for the presence for a item.

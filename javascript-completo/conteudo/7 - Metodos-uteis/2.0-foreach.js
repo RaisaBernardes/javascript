@@ -10,10 +10,10 @@ array.forEach(funcao([valorAtual, índice, array]), argumentoThis)
 ----Parâmetros----
 funcao() é a função a ser executada para cada elemento do array. Pode receber três parâmetros:
 
-valorAtual é o valor da posição atual sendo percorrida no array. Parâmetro obrigatório na declaração a função.
-índice é a posição do array que está sendo lida. Parâmetro opcional da função.
-array é o array a ser percorrido no forEach().Parâmetro opcional da função.
-argumentoThis valor opcional a ser usado como this no momento que executar a função de callback. Parâmetro opcional do forEach().
+- valorAtual é o valor da posição atual sendo percorrida no array. Parâmetro obrigatório na declaração a função.
+- índice é a posição do array que está sendo lida. Parâmetro opcional da função.
+- array é o array a ser percorrido no forEach().Parâmetro opcional da função.
+- argumentoThis valor opcional a ser usado como this no momento que executar a função de callback. Parâmetro opcional do forEach().
 
 ----Quando usar?---
 Manipular o array e fazer algum calculo dentro dele. Usaremos dele quando precisarmos de um valor calculado.
