@@ -88,8 +88,36 @@ function createComment(comment){ //vou receber um comentário
     commentsContainer.appendChild(div);
 }
 
+// Post a comment
+async function postComment(comment){
+    const response = await fetch(`${url}/${postId}/comments`, {
+        method: "POST",
+        body: comment,
+        headers: { //diz que tipo de dado eu to comunicando com a API
+            "Content-type": "application/json", //é  que padroniza o tipo da dado que será trafegado na API com essa requisição
+        },
+    });
+
+    const data = await response.json()
+    createComment(data);
+}
+
 if(!postId) {
     getAllPosts();
 } else {
     getPost(postId);
+    //Add event to comment form
+    commentForm.addEventListener("submit", (e) => {
+        e.preventDefault(); //Isso é para os dados não serem enviados quando a página for carregada, e sim com o fetch
+
+        let comment = {
+            email: emailInput.value,
+            body: bodyInput.value,
+        };
+
+        comment = JSON.stringify(comment)
+
+        postComment(comment);
+    })
+
 }
